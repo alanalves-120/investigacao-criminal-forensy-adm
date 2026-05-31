@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Caso Linha Vermelha</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;700;900&family=Bebas+Neue&family=Kalam:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     PÁGINA 1 — CAPA (Coming Soon style)
+══════════════════════════════════════ -->
+<div id="cover">
+
+  <!-- Fundo escuro tijolo -->
+  <div id="cover-bg-wall"></div>
+  <!-- Iluminação central vinda de cima -->
+  <div id="cover-spotlight"></div>
+
+  <!-- MOLDURA DO QUADRO -->
+  <div id="cover-frame">
+
+    <!-- SVG das linhas vermelhas — acima de tudo -->
+    <svg id="cover-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    <!-- CARTAZ CENTRAL "CASO LINHA VERMELHA" -->
+    <div class="c-poster" id="c-poster">
+      <div class="c-poster-ic">Instituto de Criminalística</div>
+      <div class="c-poster-title">CASO<br>LINHA<br>VERMELHA</div>
+      <div class="c-poster-rule"></div>
+      <div class="c-poster-sub">INVESTIGAÇÃO ATIVA · CLV-2026</div>
+      <div class="c-poster-q">?</div>
+      <div class="c-poster-txt">Acesso restrito a investigadores</div>
+      <!-- pins no cartaz -->
+      <div class="cpin silver" style="top:-12px;left:47%"></div>
+    </div>
+
+    <!-- POLAROIDS — dispostas como na referência -->
+    <!-- TOPO ESQUERDA -->
+    <div class="c-polaroid" id="cp-alana" style="left:6%;top:5%;transform:rotate(-10deg);">
+      <div class="cpin silver" style="top:-11px;left:44%"></div>
+      <div class="cp-img"><span class="cp-qmark">?</span></div>
+      <div class="cp-name">Alana & Laura</div>
+    </div>
+
+    <!-- MEIO ESQUERDA CIMA -->
+    <div class="c-polaroid" id="cp-gaby" style="left:3%;top:33%;transform:rotate(-6deg);">
+      <div class="cpin red" style="top:-11px;left:44%"></div>
+      <div class="cp-img"><span class="cp-qmark">?</span></div>
+      <div class="cp-name">Gaby & Bia</div>
+    </div>
+
+    <!-- BAIXO ESQUERDA -->
+    <div class="c-polaroid" id="cp-julia" style="left:6%;top:62%;transform:rotate(7deg);">
+      <div class="cpin silver" style="top:-11px;left:44%"></div>
+      <div class="cp-img"><span class="cp-qmark">?</span></div>
+      <div class="cp-name">Julia & Rafa</div>
+    </div>
+
+    <!-- TOPO DIREITA -->
+    <div class="c-polaroid" id="cp-keth" style="right:5%;top:5%;transform:rotate(9deg);">
+      <div class="cpin red" style="top:-11px;left:44%"></div>
+      <div class="cp-img"><span class="cp-qmark">?</span></div>
+      <div class="cp-name">Keth & Luan</div>
+    </div>
+
+    <!-- MEIO DIREITA CIMA -->
+    <div class="c-polaroid" id="cp-emili" style="right:3%;top:33%;transform:rotate(-5deg);">
+      <div class="cpin silver" style="top:-11px;left:44%"></div>
+      <div class="cp-img"><span class="cp-qmark">?</span></div>
+      <div class="cp-name">Sofia & Emili</div>
+    </div>
+
+    <!-- BAIXO DIREITA -->
+    <div class="c-polaroid" id="cp-nayme" style="right:5%;top:62%;transform:rotate(7deg);">
+      <div class="cpin red" style="top:-11px;left:44%"></div>
+      <div class="cp-img"><span class="cp-qmark">?</span></div>
+      <div class="cp-name">Nay & Jhulie</div>
+    </div>
+
+    <!-- NOTAS MANUSCRITAS (estilo da referência) -->
+    <div class="c-handnote" style="left:26%;top:5%;transform:rotate(3deg)">Vestígios<br>da verdade</div>
+    <div class="c-handnote" style="left:57%;top:4%;transform:rotate(-4deg)">Ciência<br>revela o crime</div>
+    <div class="c-handnote" style="left:20%;bottom:5%;transform:rotate(-2deg)">Quem<br>sobreviveu?</div>
+    <div class="c-handnote" style="right:16%;bottom:5%;transform:rotate(5deg)">A verdade<br>está aqui.</div>
+
+    <!-- NOTA CANTO (estilo "we are immortal") -->
+    <div class="c-sticknote" style="left:23%;bottom:3%;transform:rotate(-3deg)">
+      Feira de ciência<br>Vestígios da verdade
+    </div>
+    <div class="c-sticknote" style="right:18%;bottom:4%;transform:rotate(4deg)">
+      onde a ciência<br>revela o crime!
+    </div>
+
+  </div><!-- /cover-frame -->
+
+  <!-- BOTÃO ENTRAR -->
+  <div id="cover-cta">
+    <button id="enter-btn" onclick="enterSite()">
+      ▶ &nbsp;INICIAR INVESTIGAÇÃO
+    </button>
+    <p id="cover-byline">Feira de Ciências · Vestígios da Verdade · 1B ADM 2k26</p>
+  </div>
+
+  <div id="madeby-cover">Made by Alana · 1B ADM 2k26</div>
+</div><!-- /cover -->
+
+
+<!-- ══════════════════════════════════════
+     PÁGINA 2 — INTERIOR (mesa investigação)
+══════════════════════════════════════ -->
+<div id="interior">
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="hud-l">
+      <span class="hud-title">CASO LINHA VERMELHA</span>
+      <span class="hud-dot">·</span>
+      <span class="hud-sub">CLV-2026</span>
+    </div>
+    <div class="hud-c">
+      <span class="hud-plbl">DOSSIÊS: <b id="hud-n">0</b>/6</span>
+      <div class="hud-bar"><div id="hud-fill"></div></div>
+    </div>
+    <div class="hud-r">
+      <span class="bdot"></span>INVESTIGAÇÃO ATIVA
+    </div>
+  </div>
+
+  <!-- CENA DA MESA -->
+  <div id="scene">
+
+    <!-- ILUMINAÇÃO LANTERNA (canto superior direito) -->
+    <div id="lamp-light"></div>
+    <div id="lamp-obj">
+      <div class="lo-base"></div>
+      <div class="lo-body"></div>
+      <div class="lo-top"></div>
+    </div>
+
+    <!-- TEXTURA MADEIRA + PAPÉIS DECORATIVOS -->
+    <div class="bg-paper p1"></div>
+    <div class="bg-paper p2"></div>
+    <div class="bg-paper p3"></div>
+    <div class="bg-paper p4"></div>
+    <div class="bg-paper p5"></div>
+    <div class="bg-paper p6"></div>
+
+    <!-- IMPRESSÕES DIGITAIS decorativas -->
+    <div class="fingerprint-deco fp1"></div>
+    <div class="fingerprint-deco fp2"></div>
+
+    <!-- MARCADORES DE EVIDÊNCIA -->
+    <div class="ev-num" style="left:19%;top:52%">1</div>
+    <div class="ev-num" style="right:23%;top:20%">3</div>
+
+    <!-- LUPA -->
+    <div id="magnifier">
+      <div class="mag-outer"></div>
+      <div class="mag-inner"></div>
+      <div class="mag-handle"></div>
+      <div class="mag-shine"></div>
+    </div>
+
+    <!-- XÍCARA -->
+    <div id="coffee-cup">
+      <div class="cc-body"></div>
+      <div class="cc-handle"></div>
+      <div class="cc-liquid"></div>
+    </div>
+
+    <!-- SVG dos fios vermelhos — z-index alto para ficar por cima -->
+    <svg id="desk-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+    <!-- ═══ POLAROIDS/DOCUMENTOS CLICÁVEIS ═══ -->
+
+    <!-- DOC CENTRAL -->
+    <div class="d-doc" id="doc-center"
+         style="left:50%;top:38%;transform:translate(-50%,-50%) rotate(1deg);cursor:default;">
+      <div class="dpin red" style="top:-11px;left:47%"></div>
+      <div class="dd-header">LAUDO PERICIAL · CLV-2026</div>
+      <div class="dd-row">Local: Av. Brasil, 447 · Mandirituba</div>
+      <div class="dd-row">Vítimas: <b>12 jovens desaparecidos</b></div>
+      <div class="dd-row">Período: Jan – Abr 2026</div>
+      <div class="dd-row">Status: <b style="color:#c0392b">EM ABERTO</b></div>
+      <div class="dd-stamp">CLASSIFICADO</div>
+    </div>
+
+    <!-- POLAROID Alana & Laura -->
+    <div class="d-polaroid" id="dp-alana" data-key="alana"
+         style="left:4%;top:5%;" data-rot="-9">
+      <div class="dpin red" style="top:-11px;left:45%"></div>
+      <div class="dp-photo" style="background-image:url('fotos/alana.jpeg')">
+        <div class="dp-overlay"></div>
+      </div>
+      <div class="dp-label">Alana & Laura</div>
+      <div class="dp-topic">Introdução · Investigação Criminal</div>
+    </div>
+
+    <!-- POLAROID Gaby & Bia -->
+    <div class="d-polaroid" id="dp-gaby" data-key="gaby"
+         style="left:2%;top:43%;" data-rot="6">
+      <div class="dpin yellow" style="top:-11px;left:45%"></div>
+      <div class="dp-photo" style="background-image:url('fotos/gaby.jpeg')">
+        <div class="dp-overlay"></div>
+      </div>
+      <div class="dp-label">Gaby & Bia</div>
+      <div class="dp-topic">Perícia Biológica & DNA</div>
+    </div>
+
+    <!-- POLAROID Julia & Rafa -->
+    <div class="d-polaroid" id="dp-julia" data-key="julia"
+         style="left:22%;top:63%;" data-rot="-7">
+      <div class="dpin red" style="top:-11px;left:45%"></div>
+      <div class="dp-photo" style="background-image:url('fotos/julia.jpeg')">
+        <div class="dp-overlay"></div>
+      </div>
+      <div class="dp-label">Julia & Rafa</div>
+      <div class="dp-topic">Impressões Digitais & Evidências</div>
+    </div>
+
+    <!-- POLAROID Keth & Luan -->
+    <div class="d-polaroid" id="dp-keth" data-key="keth"
+         style="right:3%;top:4%;" data-rot="8">
+      <div class="dpin yellow" style="top:-11px;left:45%"></div>
+      <div class="dp-photo" style="background-image:url('fotos/keth.jpeg')">
+        <div class="dp-overlay"></div>
+      </div>
+      <div class="dp-label">Keth & Luan</div>
+      <div class="dp-topic">Psicologia Criminal</div>
+    </div>
+
+    <!-- POLAROID Sofia & Emili -->
+    <div class="d-polaroid" id="dp-emili" data-key="emili"
+         style="right:2%;top:43%;" data-rot="-5">
+      <div class="dpin red" style="top:-11px;left:45%"></div>
+      <div class="dp-photo" style="background-image:url('fotos/emili.jpeg')">
+        <div class="dp-overlay"></div>
+      </div>
+      <div class="dp-label">Sofia & Emili</div>
+      <div class="dp-topic">Identificação Forense</div>
+    </div>
+
+    <!-- POLAROID Nay & Jhulie -->
+    <div class="d-polaroid" id="dp-nayme" data-key="nayme"
+         style="right:21%;top:64%;" data-rot="7">
+      <div class="dpin yellow" style="top:-11px;left:45%"></div>
+      <div class="dp-photo" style="background-image:url('fotos/nayme.jpeg')">
+        <div class="dp-overlay"></div>
+      </div>
+      <div class="dp-label">Nay & Jhulie</div>
+      <div class="dp-topic">Reconstrução do Caso</div>
+    </div>
+
+    <!-- BLOCO DE NOTAS -->
+    <div class="d-notepad" style="left:50%;top:72%;transform:translateX(-50%) rotate(-1.5deg);">
+      <div class="dn-line">— O fio vermelho une as vítimas</div>
+      <div class="dn-line">— Todos pertenciam ao mesmo grupo</div>
+      <div class="dn-line">— Ferimentos precisos / repetitivos</div>
+      <div class="dn-red">— Quem sobreviveu?</div>
+    </div>
+
+    <div id="scene-hint">👆 Clique nas fotos para abrir cada dossiê</div>
+
+  </div><!-- /scene -->
+
+  <div id="madeby">Made by Alana · 1B ADM 2k26</div>
+</div><!-- /interior -->
+
+
+<!-- ══════════════════════════════════════
+     MODAL DOSSIÊ
+══════════════════════════════════════ -->
+<div id="modal-ov">
+  <div id="modal">
+    <button id="modal-x" onclick="closeModal()">✕ FECHAR</button>
+    <div id="modal-badge"></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     LIGHTBOX — ampliar foto
+══════════════════════════════════════ -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt=""/>
+  <button id="lightbox-x" onclick="closeLightbox()">✕</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
